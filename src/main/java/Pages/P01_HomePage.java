@@ -288,6 +288,7 @@ public class P01_HomePage {
 //                System.out.println("The show that the item is added to wish list=>...:   " + successMessage.getText());
 //            }
 //        }
+
         wishListPage.click();
     }
 

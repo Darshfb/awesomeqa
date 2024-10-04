@@ -1,6 +1,6 @@
-# XYZ Bank
+# AwesomeQa
 
-![XYZ Bank Logo](https://static.vecteezy.com/system/resources/thumbnails/009/020/508/small/xyz-logo-xyz-letter-xyz-letter-logo-design-initials-xyz-logo-linked-with-circle-and-uppercase-monogram-logo-xyz-typography-for-technology-business-and-real-estate-brand-vector.jpg)
+![AwesomeQa Logo](https://awesomeqa.com/ui/image/catalog/opencart-logo.png)
 
 ## Table of Contents
 
@@ -13,7 +13,7 @@
 
 ## Introduction
 
-XYZ Bank is a banking application that provides various banking services and features. This repository contains the source code for the XYZ Bank application.
+AwesomeQa is a banking application that provides various banking services and features. This repository contains the source code for the AwesomeQa application.
 
 ## Features
 
@@ -24,7 +24,7 @@ XYZ Bank is a banking application that provides various banking services and fea
 
 ## Installation
 
-To set up the XYZ Bank application locally, follow these steps:
+To set up the AwesomeQa application locally, follow these steps:
 
 1. Clone the repository:
 *   git clone https://github.com/Shady1997/XYZ-Bank.git
@@ -39,14 +39,14 @@ To set up the XYZ Bank application locally, follow these steps:
 *   npm start
 
 ## Usage
-* User Guide: Refer to the User Guide for detailed information on how to use the XYZ Bank application.
+* User Guide: Refer to the User Guide for detailed information on how to use the AwesomeQa application.
 
 ## Contributing
-* We welcome contributions from the community. To contribute to XYZ Bank, follow these steps:
+* We welcome contributions from the community. To contribute to AwesomeQa, follow these steps:
 
 ## Fork the repository.
 * Create a new branch for your feature or bug fix.
 * Make your changes and submit a pull request.
 
 ## License
-* XYZ Bank is licensed under the MIT License.
+* AwesomeQa is licensed under the MIT License.

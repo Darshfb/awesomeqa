@@ -1,5 +1,4 @@
 package Pages;
-
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
@@ -7,7 +6,6 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import java.awt.*;
 import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.StringSelection;
@@ -15,7 +13,6 @@ import java.awt.event.KeyEvent;
 import java.io.File;
 import java.time.Duration;
 import java.util.List;
-import java.util.Set;
 
 import static util.Utility.selectRandomElement;
 
@@ -39,26 +36,18 @@ public class P01_HomePage {
     @FindBy(xpath = "(//a)[text()='Logout'][1]")
     WebElement logout;
 
-
-    @FindBy(xpath = "(//div)[@id='content']/div[2]/div")
-    List<WebElement> listOfProductsFromCategories;
-
     @FindBy(xpath = "(//div)[@class='row'][3]/div")
     List<WebElement> listOfProductsFromHome;
 
     @FindBy(xpath = "(//img)[@class='img-responsive']")
     WebElement websiteLogo;
 
-    @FindBy(id = "cart-total")
-    WebElement cartTotal;
-
-    @FindBy(xpath = "(//div)[@class='alert alert-success alert-dismissible']")
-    WebElement successMessage;
-
     @FindBy(xpath = "(//h1)[1]")
     WebElement secondItemDetails;
+
     @FindBy(xpath = "(//div)[@id='input-option218']/div")
     List<WebElement> listOfRadios;
+
     @FindBy(xpath = "(//div)[@id='input-option223']/div")
     List<WebElement> listOfCheckboxes;
 
@@ -169,13 +158,15 @@ public class P01_HomePage {
         return false;
     }
 
-    public void selectFromFirstThreeCategories() {
+    public void selectFromFirstThreeCategories()
+    {
         List<WebElement> firstThreeItems = categoryList.subList(0, 3);
         selectRandomCategory(firstThreeItems);
         System.out.println("The size for the three category list " + firstThreeItems.size());
     }
 
-    private void selectRandomCategory(List<WebElement> categoryItemList) {
+    private void selectRandomCategory(List<WebElement> categoryItemList)
+    {
         WebElement selectRandomFromFirstThreeItems = selectRandomElement(categoryItemList);
         Actions actions = new Actions(customDriver);
         actions.moveToElement(selectRandomFromFirstThreeItems).perform();
@@ -198,9 +189,13 @@ public class P01_HomePage {
         }
     }
 
+    @FindBy(xpath = "(//div)[@class='row'][3]/div/div/div[3]/button[1]")
+    List<WebElement> listOfAddToCartButton;
+
     public void addItemTOCartDirectly(){
         websiteLogo.click();
-        listOfProductsFromHome.get(0).findElement(By.xpath(".//button[1]")).click();
+        listOfAddToCartButton.get(0).click();
+        listOfAddToCartButton.get(1).click();
     }
 
     public void addItemTOCartFromItemDetails(){
@@ -267,28 +262,14 @@ public class P01_HomePage {
     @FindBy(xpath = "(//a)[text()='wish list']")
     WebElement wishListPage;
 
-    public void addItemToWishListFromHome() throws InterruptedException {
-        websiteLogo.click();
-        listOfProductsFromHome.get(0).findElement(By.xpath(".//button[2]")).click();
-//        Thread.sleep(500);
-//        WebElement element = listOfProductsFromHome.get(1).findElement(By.xpath(".//button[2]"));
-//        System.out.println("element is : " + element.getText());
-//        element.click();
-//        Thread.sleep(500);
-//        listOfProductsFromHome.get(2).findElement(By.xpath(".//button[2]")).click();
-//        Thread.sleep(500);
-//        listOfProductsFromHome.get(3).findElement(By.xpath(".//button[2]")).click();
-//        ------------------------------
-//        List<WebElement> wishListList = listOfProductsFromHome.subList(0,2);
-//        for (WebElement item : wishListList) {
-//            WebElement element = item.findElement(By.xpath(".//button[2]"));
-//            Thread.sleep(500);
-//            element.click();
-//            if (successMessage.isDisplayed()) {
-//                System.out.println("The show that the item is added to wish list=>...:   " + successMessage.getText());
-//            }
-//        }
+    By first = By.xpath("(//div)[@class='row'][3]/div[1]/div/div[3]/button[2]");
+    By second = By.xpath("(//div)[@class='row'][3]/div[2]/div/div[3]/button[2]");
 
+    public void addItemToWishListFromHome()
+    {
+        websiteLogo.click();
+        customDriver.findElement(first).click();
+        customDriver.findElement(second).click();
         wishListPage.click();
     }
 
@@ -298,44 +279,29 @@ public class P01_HomePage {
 
     public Boolean isWishListHasTwoItems()
     {
-        return listOfWishList.size() == 4;
+        return listOfWishList.size() == 2;
     }
 
-    String firstItem = "";
-    String secondItem = "";
     @FindBy(xpath = "(//a)[text()='product comparison']")
     WebElement comparisonProduct;
 
+    By firstCompare = By.xpath("(//div)[@class='row'][3]/div[1]/div/div[3]/button[3]");
+    By secondCompare = By.xpath("(//div)[@class='row'][3]/div[3]/div/div[3]/button[3]");
+
     public void addItemToCompareListFromHome() throws InterruptedException {
         websiteLogo.click();
-        List<WebElement> compareFirstTwoProducts = listOfProductsFromHome.subList(0, 2);
-//        firstItem = item.findElement(By.xpath(".//a[1]")).getText();
-        firstItem = compareFirstTwoProducts.get(0).findElement(By.xpath("div/div[2]/h4/a")).getText();
-        secondItem = compareFirstTwoProducts.get(1).findElement(By.xpath("div/div[2]/h4/a")).getText();
-        for (WebElement item : compareFirstTwoProducts) {
-            System.out.println("The size of products : " + compareFirstTwoProducts.size());
-            WebElement element = item.findElement(By.xpath(".//button[3]"));
-            Thread.sleep(500);
-            element.click();
-            if (successMessage.isDisplayed()) {
-                System.out.println("The show that the item is added to wish list=>...:   " + successMessage.getText());
-            }
-            Thread.sleep(500);
-        }
+        customDriver.findElement(firstCompare).click();
+        customDriver.findElement(secondCompare).click();
+        Thread.sleep(1000);
         comparisonProduct.click();
     }
 
-    @FindBy(xpath = "(//table)[@class='table table-bordered'][2]/tbody[1]/tr[1]/td/a")
-    List<WebElement> comparisonProducts;
+    @FindBy(xpath = "(//table)[@class='table table-bordered']/tbody[1]/tr[2]/td/img")
+    List<WebElement> listOfComparisonProducts;
 
-    public Boolean checkThatItemsAreAddedToCompareList() {
-        String firstCompareItem = comparisonProducts.get(0).getText();
-        String secondCompareItem = comparisonProducts.get(1).getText();
-        return firstCompareItem.equals(firstItem) && secondCompareItem.equals(secondItem);
-    }
-
-    public String getCartTotal() {
-        return cartTotal.getText();
+    public Boolean checkThatItemsAreAddedToCompareList(int itemCount)
+    {
+        return listOfComparisonProducts.size() == itemCount;
     }
 
     @FindBy(xpath = "(//i)[@class='fa fa-shopping-cart'][1]")

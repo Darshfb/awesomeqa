@@ -1,7 +1,5 @@
 package testcases;
-
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
@@ -21,7 +19,6 @@ public class TestBase
     @BeforeTest
     public void setupWebDriver(String browserName)
     {
-//        driver = new ChromeDriver();
         setDriver(getNewInstance(browserName));
         driver = getDriver();
         driver.manage().window().maximize();

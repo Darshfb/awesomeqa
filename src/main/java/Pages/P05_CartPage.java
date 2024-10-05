@@ -1,5 +1,4 @@
 package Pages;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
@@ -11,6 +10,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.List;
 
 public class P05_CartPage {
     WebDriver customDriver;
@@ -22,13 +22,6 @@ public class P05_CartPage {
 
     @FindBy(xpath = "(//a)[text()='Checkout']")
     public WebElement checkoutButton;
-
-    public void clickCheckoutButton() {
-        checkoutButton.click();
-    }
-
-    @FindBy(xpath = "(//div)[@class='panel-group']")
-    WebElement checkoutList;
 
     @FindBy(id = "input-payment-firstname")
     WebElement firstName;
@@ -71,9 +64,6 @@ public class P05_CartPage {
 
     @FindBy(xpath = "(//input)[@id='button-shipping-method']")
     WebElement continueToPaymentMethod;
-
-    @FindBy(xpath = "(//div)[@class='alert alert-danger alert-dismissible']")
-    WebElement alertMessage;
 
     @FindBy(id = "button-payment-method")
     WebElement continueToPaymentMethod2;
@@ -120,11 +110,30 @@ public class P05_CartPage {
         continueToFinishOrderButton.click();
     }
 
-    public String getPaymentErrorMessage(){
-        return alertMessage.getText();
-    }
-
     public String getSuccessMessage(){
         return successMessage.getText();
+    }
+
+    @FindBy(xpath = "(//table)[3]/tbody/tr[1]/td[4]/div/span/button[2]")
+    WebElement firstItemInCart;
+
+    @FindBy(xpath = "(//table)[3]/tbody/tr")
+    List<WebElement> cartItems;
+
+    public void removeItemsFromCart() throws InterruptedException {
+        firstItemInCart.click();
+        Thread.sleep(1000);
+        firstItemInCart.click();
+    }
+
+    public Boolean checkCartItemCounts(){
+        return cartItems.size() == 2;
+    }
+
+    @FindBy(xpath = "(//p)[text()='Your shopping cart is empty!'][2]")
+    WebElement emptyCart;
+
+    public Boolean checkCartIsEmpty(){
+        return emptyCart.getText().contains("Your shopping cart is empty!");
     }
 }

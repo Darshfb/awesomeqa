@@ -4,9 +4,13 @@
     <inspection_tool class="groupsTestNG" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="groups">
         <value>
-          <list size="2">
+          <list size="6">
             <item index="0" class="java.lang.String" itemvalue="step1" />
             <item index="1" class="java.lang.String" itemvalue="step2" />
+            <item index="2" class="java.lang.String" itemvalue="step3" />
+            <item index="3" class="java.lang.String" itemvalue="goToCart" />
+            <item index="4" class="java.lang.String" itemvalue="register" />
+            <item index="5" class="java.lang.String" itemvalue="login" />
           </list>
         </value>
       </option>

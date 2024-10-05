@@ -1,5 +1,4 @@
 package testcases;
-
 import Pages.P01_HomePage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -27,10 +26,8 @@ public class Tc01_Home extends TestBase {
         homeLayout.logout();
     }
 
-
     @Test(priority = 1, description = "Searching for items", dependsOnGroups = {"step2"})
-    public void searchingForItems()
-    {
+    public void searchingForItems() {
         String searchText = "MacBook";
         homeLayout = new P01_HomePage(driver);
         homeLayout.search(searchText);
@@ -38,7 +35,8 @@ public class Tc01_Home extends TestBase {
     }
 
     @Test(priority = 1, description = "Change currency to Euro", dependsOnGroups = {"step2"})
-    void changeCurrencyToEuro() throws InterruptedException {
+    void changeCurrencyToEuro()
+    {
         homeLayout = new P01_HomePage(driver);
         homeLayout.openCurrencyDropMenu(false);
         SoftAssert softAssert = new SoftAssert();
@@ -47,15 +45,13 @@ public class Tc01_Home extends TestBase {
     }
 
     @Test(priority = 2, description = "Change currency Randomly", dependsOnGroups = {"step2"})
-    public void changeCurrencyRandomly()
-    {
+    public void changeCurrencyRandomly() {
         homeLayout = new P01_HomePage(driver);
         homeLayout.openCurrencyDropMenu(true);
     }
 
     @Test(priority = 1, dependsOnGroups = {"step2"})
-    public void selectCategories()
-    {
+    public void selectCategories() {
         homeLayout.openCategoryDropMenu();
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertTrue(homeLayout.isSelectedCategoryTrue());
@@ -63,44 +59,44 @@ public class Tc01_Home extends TestBase {
     }
 
     @Test(priority = 1, description = "select From First Three Categories", dependsOnGroups = {"step2"})
-    public void selectFromFirstThreeCategories()throws InterruptedException
+    public void selectFromFirstThreeCategories()
     {
         homeLayout.selectFromFirstThreeCategories();
     }
 
     @Test(priority = 1, dependsOnGroups = {"step2"})
-    public void addItemToCart() throws InterruptedException {
+    public void addItemToCart()
+    {
         homeLayout.addItemTOCartDirectly();
-//        homeLayout.addItemToCartFromHome();
     }
+
     @Test(priority = 1, dependsOnGroups = {"step2"})
     public void addToCartFromItemDetails() {
         homeLayout.addItemTOCartFromItemDetails();
     }
 
+
     @Test(priority = 4, dependsOnGroups = {"step2"})
-    public void addToWishList() throws InterruptedException {
+    public void addToWishList()
+    {
         homeLayout.addItemToWishListFromHome();
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertTrue(homeLayout.isWishListHasTwoItems());
         softAssert.assertAll();
     }
 
-    @Test(priority = 4, dependsOnGroups = {"step2"})
-    public void addToCompareList() throws InterruptedException
-    {
+    @Test(priority = 4, dependsOnGroups = {"step2"}, groups = {"step3"})
+    public void addToCompareList() throws InterruptedException {
         homeLayout.addItemToCompareListFromHome();
-//        homeLayout.checkThatItemsAreAddedToCompareList();
         SoftAssert softAssert = new SoftAssert();
-        softAssert.assertTrue(homeLayout.checkThatItemsAreAddedToCompareList());
+        softAssert.assertTrue(homeLayout.checkThatItemsAreAddedToCompareList(2));
         softAssert.assertAll();
 
     }
 
-    @Test(priority = 4)
+    @Test(priority = 4, dependsOnMethods = {"addItemToCart"}, groups = {"goToCart"})
     public void goToCart() {
         homeLayout.navigateToCart();
     }
-
 
 }

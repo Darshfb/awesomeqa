@@ -3,281 +3,302 @@
 <suite name="AwesomeQa">
     <parameter name="browserName" value=""/>
 
-    <!--    SC1- User could register with valid data-->
-<!--    <test verbose="2" name="Register with happy scenarios">-->
-<!--        <classes>-->
-<!--            <class name="testcases.Tc01_Home">-->
-<!--                <methods>-->
-<!--                    <include name="validateEnteringRegisterPage"/>-->
-<!--                </methods>-->
-<!--            </class>-->
-<!--            <class name="testcases.Tc02_Register">-->
-<!--                <methods>-->
-<!--                    <include name="registerWithValidEmailAndPassword"/>-->
-<!--                </methods>-->
-<!--            </class>-->
-<!--        </classes>-->
-<!--    </test>-->
+    <!--    &lt;!&ndash;    SC1- User could register with valid data&ndash;&gt;-->
+    <!--    <test verbose="2" name="Register with happy scenarios">-->
+    <!--        <classes>-->
+    <!--            <class name="testcases.Tc01_Home">-->
+    <!--                <methods>-->
+    <!--                    <include name="validateEnteringRegisterPage"/>-->
+    <!--                </methods>-->
+    <!--            </class>-->
+    <!--            <class name="testcases.Tc02_Register">-->
+    <!--                <methods>-->
+    <!--                    <include name="registerWithValidEmailAndPassword"/>-->
+    <!--                </methods>-->
+    <!--            </class>-->
+    <!--        </classes>-->
+    <!--    </test>-->
 
-<!--    <test verbose="2" name="Register with invalid scenarios">-->
-<!--        <classes>-->
-<!--            <class name="testcases.Tc01_Home">-->
-<!--                <methods>-->
-<!--                    <include name="validateEnteringRegisterPage"/>-->
-<!--                </methods>-->
-<!--            </class>-->
-<!--            <class name="testcases.Tc02_Register">-->
-<!--                <methods>-->
-<!--                    <exclude name="registerWithValidEmailAndPassword"/>-->
-<!--                </methods>-->
-<!--            </class>-->
-<!--        </classes>-->
-<!--    </test>-->
+    <!--    <test verbose="2" name="Register with invalid scenarios">-->
+    <!--        <classes>-->
+    <!--            <class name="testcases.Tc01_Home">-->
+    <!--                <methods>-->
+    <!--                    <include name="validateEnteringRegisterPage"/>-->
+    <!--                </methods>-->
+    <!--            </class>-->
+    <!--            <class name="testcases.Tc02_Register">-->
+    <!--                <methods>-->
+    <!--                    <exclude name="registerWithValidEmailAndPassword"/>-->
+    <!--                </methods>-->
+    <!--            </class>-->
+    <!--        </classes>-->
+    <!--    </test>-->
 
-<!--    &lt;!&ndash;    SC2- User could log in with valid email and password&ndash;&gt;-->
-<!--    <test name="Login with happy scenarios">-->
-<!--        <classes>-->
-<!--            <class name="testcases.Tc01_Home">-->
-<!--                <methods>-->
-<!--                    <include name="validateEnteringLoginPage"/>-->
-<!--                </methods>-->
-<!--            </class>-->
-<!--            <class name="testcases.Tc03_Login">-->
-<!--                <methods>-->
-<!--                    <include name="loginWithValidData"/>-->
-<!--                </methods>-->
-<!--            </class>-->
-<!--        </classes>-->
-<!--    </test>-->
+    <!--    &lt;!&ndash;    SC2- User could log in with valid email and password&ndash;&gt;-->
+    <!--    <test name="Login with happy scenarios">-->
+    <!--        <classes>-->
+    <!--            <class name="testcases.Tc01_Home">-->
+    <!--                <methods>-->
+    <!--                    <include name="validateEnteringLoginPage"/>-->
+    <!--                </methods>-->
+    <!--            </class>-->
+    <!--            <class name="testcases.Tc03_Login">-->
+    <!--                <methods>-->
+    <!--                    <include name="loginWithValidData"/>-->
+    <!--                </methods>-->
+    <!--            </class>-->
+    <!--        </classes>-->
+    <!--    </test>-->
 
-<!--    <test name="Login with invalid scenarios">-->
-<!--        <classes>-->
-<!--            <class name="testcases.Tc01_Home">-->
-<!--                <methods>-->
-<!--                    <include name="validateEnteringLoginPage"/>-->
-<!--                </methods>-->
-<!--            </class>-->
-<!--            <class name="testcases.Tc03_Login">-->
-<!--                <methods>-->
-<!--                    <exclude name="loginWithValidData"/>-->
-<!--                    <exclude name="navigateToForgotPasswordPage"/>-->
-<!--                </methods>-->
-<!--            </class>-->
-<!--        </classes>-->
-<!--    </test>-->
+    <!--    <test name="Login with invalid scenarios">-->
+    <!--        <classes>-->
+    <!--            <class name="testcases.Tc01_Home">-->
+    <!--                <methods>-->
+    <!--                    <include name="validateEnteringLoginPage"/>-->
+    <!--                </methods>-->
+    <!--            </class>-->
+    <!--            <class name="testcases.Tc03_Login">-->
+    <!--                <methods>-->
+    <!--                    <exclude name="loginWithValidData"/>-->
+    <!--                    <exclude name="navigateToForgotPasswordPage"/>-->
+    <!--                </methods>-->
+    <!--            </class>-->
+    <!--        </classes>-->
+    <!--    </test>-->
 
-<!--    &lt;!&ndash;    SC3- User could reset his/her password successfully&ndash;&gt;-->
-<!--    <test name="Forgot password happy scenario">-->
-<!--        <classes>-->
-<!--            <class name="testcases.Tc01_Home">-->
-<!--                <methods>-->
-<!--                    <include name="validateEnteringLoginPage"/>-->
-<!--                </methods>-->
-<!--            </class>-->
-<!--            <class name="testcases.Tc03_Login">-->
-<!--                <methods>-->
-<!--                    <include name="navigateToForgotPasswordPage"/>-->
-<!--                </methods>-->
-<!--            </class>-->
-<!--            <class name="testcases.Tc04_ForgotPassword">-->
-<!--                <methods>-->
-<!--                    <include name="forgotPasswordWithValidData"/>-->
-<!--                </methods>-->
-<!--            </class>-->
-<!--        </classes>-->
-<!--    </test>-->
+    <!--    &lt;!&ndash;    SC3- User could reset his/her password successfully&ndash;&gt;-->
+    <!--    <test name="Forgot password happy scenario">-->
+    <!--        <classes>-->
+    <!--            <class name="testcases.Tc01_Home">-->
+    <!--                <methods>-->
+    <!--                    <include name="validateEnteringLoginPage"/>-->
+    <!--                </methods>-->
+    <!--            </class>-->
+    <!--            <class name="testcases.Tc03_Login">-->
+    <!--                <methods>-->
+    <!--                    <include name="navigateToForgotPasswordPage"/>-->
+    <!--                </methods>-->
+    <!--            </class>-->
+    <!--            <class name="testcases.Tc04_ForgotPassword">-->
+    <!--                <methods>-->
+    <!--                    <include name="forgotPasswordWithValidData"/>-->
+    <!--                </methods>-->
+    <!--            </class>-->
+    <!--        </classes>-->
+    <!--    </test>-->
 
-<!--    <test name="Forgot password invalid scenario">-->
-<!--        <classes>-->
-<!--            <class name="testcases.Tc01_Home">-->
-<!--                <methods>-->
-<!--                    <include name="validateEnteringLoginPage"/>-->
-<!--                </methods>-->
-<!--            </class>-->
-<!--            <class name="testcases.Tc03_Login">-->
-<!--                <methods>-->
-<!--                    <include name="navigateToForgotPasswordPage"/>-->
-<!--                </methods>-->
-<!--            </class>-->
-<!--            <class name="testcases.Tc04_ForgotPassword">-->
-<!--                <methods>-->
-<!--                    <include name="forgotPasswordWithInvalidData"/>-->
-<!--                </methods>-->
-<!--            </class>-->
-<!--        </classes>-->
-<!--    </test>-->
+    <!--    <test name="Forgot password invalid scenario">-->
+    <!--        <classes>-->
+    <!--            <class name="testcases.Tc01_Home">-->
+    <!--                <methods>-->
+    <!--                    <include name="validateEnteringLoginPage"/>-->
+    <!--                </methods>-->
+    <!--            </class>-->
+    <!--            <class name="testcases.Tc03_Login">-->
+    <!--                <methods>-->
+    <!--                    <include name="navigateToForgotPasswordPage"/>-->
+    <!--                </methods>-->
+    <!--            </class>-->
+    <!--            <class name="testcases.Tc04_ForgotPassword">-->
+    <!--                <methods>-->
+    <!--                    <include name="forgotPasswordWithInvalidData"/>-->
+    <!--                </methods>-->
+    <!--            </class>-->
+    <!--        </classes>-->
+    <!--    </test>-->
 
-<!--    &lt;!&ndash;    SC4- Logged User could search for any product&ndash;&gt;-->
-<!--    <test name="Logged User could search for any product">-->
-<!--        <classes>-->
-<!--            <class name="testcases.Tc01_Home">-->
-<!--                <methods>-->
-<!--                    <include name="validateEnteringLoginPage"/>-->
-<!--                    <include name="searchingForItems"/>-->
-<!--                </methods>-->
-<!--            </class>-->
-<!--            <class name="testcases.Tc03_Login">-->
-<!--                <methods>-->
-<!--                    <include name="loginWithValidData"/>-->
-<!--                </methods>-->
-<!--            </class>-->
-<!--        </classes>-->
-<!--    </test>-->
+    <!--    &lt;!&ndash;    SC4- Logged User could search for any product&ndash;&gt;-->
+    <!--    <test name="Logged User could search for any product">-->
+    <!--        <classes>-->
+    <!--            <class name="testcases.Tc01_Home">-->
+    <!--                <methods>-->
+    <!--                    <include name="validateEnteringLoginPage"/>-->
+    <!--                    <include name="searchingForItems"/>-->
+    <!--                </methods>-->
+    <!--            </class>-->
+    <!--            <class name="testcases.Tc03_Login">-->
+    <!--                <methods>-->
+    <!--                    <include name="loginWithValidData"/>-->
+    <!--                </methods>-->
+    <!--            </class>-->
+    <!--        </classes>-->
+    <!--    </test>-->
 
-<!--    &lt;!&ndash;    SC5- Logged User could switch between currencies US-Euro&ndash;&gt;-->
-<!--    <test name="Logged User could switch between currencies to Euro">-->
-<!--        <classes>-->
-<!--            <class name="testcases.Tc01_Home">-->
-<!--                <methods>-->
-<!--                    <include name="validateEnteringLoginPage"/>-->
-<!--                    <include name="changeCurrencyToEuro"/>-->
-<!--                </methods>-->
-<!--            </class>-->
-<!--            <class name="testcases.Tc03_Login">-->
-<!--                <methods>-->
-<!--                    <include name="loginWithValidData"/>-->
-<!--                </methods>-->
-<!--            </class>-->
-<!--        </classes>-->
-<!--    </test>-->
-<!--    <test name="Logged User could switch between currencies Randomly">-->
-<!--        <classes>-->
-<!--            <class name="testcases.Tc01_Home">-->
-<!--                <methods>-->
-<!--                    <include name="validateEnteringLoginPage"/>-->
-<!--                    <include name="changeCurrencyRandomly"/>-->
-<!--                </methods>-->
-<!--            </class>-->
-<!--            <class name="testcases.Tc03_Login">-->
-<!--                <methods>-->
-<!--                    <include name="loginWithValidData"/>-->
-<!--                </methods>-->
-<!--            </class>-->
-<!--        </classes>-->
-<!--    </test>-->
+    <!--    &lt;!&ndash;    SC5- Logged User could switch between currencies US-Euro&ndash;&gt;-->
+    <!--    <test name="Logged User could switch between currencies to Euro">-->
+    <!--        <classes>-->
+    <!--            <class name="testcases.Tc01_Home">-->
+    <!--                <methods>-->
+    <!--                    <include name="validateEnteringLoginPage"/>-->
+    <!--                    <include name="changeCurrencyToEuro"/>-->
+    <!--                </methods>-->
+    <!--            </class>-->
+    <!--            <class name="testcases.Tc03_Login">-->
+    <!--                <methods>-->
+    <!--                    <include name="loginWithValidData"/>-->
+    <!--                </methods>-->
+    <!--            </class>-->
+    <!--        </classes>-->
+    <!--    </test>-->
+    <!--    <test name="Logged User could switch between currencies Randomly">-->
+    <!--        <classes>-->
+    <!--            <class name="testcases.Tc01_Home">-->
+    <!--                <methods>-->
+    <!--                    <include name="validateEnteringLoginPage"/>-->
+    <!--                    <include name="changeCurrencyRandomly"/>-->
+    <!--                </methods>-->
+    <!--            </class>-->
+    <!--            <class name="testcases.Tc03_Login">-->
+    <!--                <methods>-->
+    <!--                    <include name="loginWithValidData"/>-->
+    <!--                </methods>-->
+    <!--            </class>-->
+    <!--        </classes>-->
+    <!--    </test>-->
 
-<!--    &lt;!&ndash;    SC6- Logged user could select different Categories&ndash;&gt;-->
-<!--    <test name="Logged user could select different Categories">-->
-<!--        <classes>-->
-<!--            <class name="testcases.Tc01_Home">-->
-<!--                <methods>-->
-<!--                    <include name="validateEnteringLoginPage"/>-->
-<!--                    <include name="selectCategories"/>-->
-<!--                </methods>-->
-<!--            </class>-->
-<!--            <class name="testcases.Tc03_Login">-->
-<!--                <methods>-->
-<!--                    <include name="loginWithValidData"/>-->
-<!--                </methods>-->
-<!--            </class>-->
-<!--        </classes>-->
-<!--    </test>-->
+    <!--    &lt;!&ndash;    SC6- Logged user could select different Categories&ndash;&gt;-->
+    <!--    <test name="Logged user could select different Categories">-->
+    <!--        <classes>-->
+    <!--            <class name="testcases.Tc01_Home">-->
+    <!--                <methods>-->
+    <!--                    <include name="validateEnteringLoginPage"/>-->
+    <!--                    <include name="selectCategories"/>-->
+    <!--                </methods>-->
+    <!--            </class>-->
+    <!--            <class name="testcases.Tc03_Login">-->
+    <!--                <methods>-->
+    <!--                    <include name="loginWithValidData"/>-->
+    <!--                </methods>-->
+    <!--            </class>-->
+    <!--        </classes>-->
+    <!--    </test>-->
 
-<!--    &lt;!&ndash;    SC8- Logged user could select different category from first three categories &ndash;&gt;-->
-<!--    <test name="Logged user could select different tags">-->
-<!--        <classes>-->
-<!--            <class name="testcases.Tc01_Home">-->
-<!--                <methods>-->
-<!--                    <include name="validateEnteringLoginPage"/>-->
-<!--                    <include name="selectFromFirstThreeCategories"/>-->
-<!--                </methods>-->
-<!--            </class>-->
-<!--            <class name="testcases.Tc03_Login">-->
-<!--                <methods>-->
-<!--                    <include name="loginWithValidData"/>-->
-<!--                </methods>-->
-<!--            </class>-->
-<!--        </classes>-->
-<!--    </test>-->
+    <!--    &lt;!&ndash;    SC8- Logged user could select different category from first three categories &ndash;&gt;-->
+    <!--    <test name="Logged user could select different tags">-->
+    <!--        <classes>-->
+    <!--            <class name="testcases.Tc01_Home">-->
+    <!--                <methods>-->
+    <!--                    <include name="validateEnteringLoginPage"/>-->
+    <!--                    <include name="selectFromFirstThreeCategories"/>-->
+    <!--                </methods>-->
+    <!--            </class>-->
+    <!--            <class name="testcases.Tc03_Login">-->
+    <!--                <methods>-->
+    <!--                    <include name="loginWithValidData"/>-->
+    <!--                </methods>-->
+    <!--            </class>-->
+    <!--        </classes>-->
+    <!--    </test>-->
 
-<!--    &lt;!&ndash;    SC9- Logged user could add different products to Shopping cart&ndash;&gt;-->
-<!--    <test name="Logged user could add item to Shopping cart directly">-->
-<!--        <classes>-->
-<!--            <class name="testcases.Tc01_Home">-->
-<!--                <methods>-->
-<!--                    <include name="validateEnteringLoginPage"/>-->
-<!--                    <include name="addItemToCart"/>-->
-<!--                </methods>-->
-<!--            </class>-->
-<!--            <class name="testcases.Tc03_Login">-->
-<!--                <methods>-->
-<!--                    <include name="loginWithValidData"/>-->
-<!--                </methods>-->
-<!--            </class>-->
-<!--        </classes>-->
-<!--    </test>-->
+    <!--    &lt;!&ndash;    SC9- Logged user could add different products to Shopping cart&ndash;&gt;-->
+    <!--    <test name="Logged user could add item to Shopping cart directly">-->
+    <!--        <classes>-->
+    <!--            <class name="testcases.Tc01_Home">-->
+    <!--                <methods>-->
+    <!--                    <include name="validateEnteringLoginPage"/>-->
+    <!--                    <include name="addItemToCart"/>-->
+    <!--                </methods>-->
+    <!--            </class>-->
+    <!--            <class name="testcases.Tc03_Login">-->
+    <!--                <methods>-->
+    <!--                    <include name="loginWithValidData"/>-->
+    <!--                </methods>-->
+    <!--            </class>-->
+    <!--        </classes>-->
+    <!--    </test>-->
 
-<!--    <test name="Logged user could add item to Shopping cart from item details">-->
-<!--        <classes>-->
-<!--            <class name="testcases.Tc01_Home">-->
-<!--                <methods>-->
-<!--                    <include name="validateEnteringLoginPage"/>-->
-<!--                    <include name="addToCartFromItemDetails"/>-->
-<!--                </methods>-->
-<!--            </class>-->
-<!--            <class name="testcases.Tc03_Login">-->
-<!--                <methods>-->
-<!--                    <include name="loginWithValidData"/>-->
-<!--                </methods>-->
-<!--            </class>-->
-<!--        </classes>-->
-<!--    </test>-->
+    <!--    <test name="Logged user could add item to Shopping cart from item details">-->
+    <!--        <classes>-->
+    <!--            <class name="testcases.Tc01_Home">-->
+    <!--                <methods>-->
+    <!--                    <include name="validateEnteringLoginPage"/>-->
+    <!--                    <include name="addToCartFromItemDetails"/>-->
+    <!--                </methods>-->
+    <!--            </class>-->
+    <!--            <class name="testcases.Tc03_Login">-->
+    <!--                <methods>-->
+    <!--                    <include name="loginWithValidData"/>-->
+    <!--                </methods>-->
+    <!--            </class>-->
+    <!--        </classes>-->
+    <!--    </test>-->
 
-    <!--    SC10- Logged user could add different products to Wishlist-->
-    <test name="Logged user could add different products to Wishlist">
+    <!--    &lt;!&ndash;    SC10- Logged user could add different products to Wishlist&ndash;&gt;-->
+    <!--    <test name="Logged user could add different products to Wishlist">-->
+    <!--        <classes>-->
+    <!--            <class name="testcases.Tc01_Home">-->
+    <!--                <methods>-->
+    <!--                    <include name="validateEnteringLoginPage"/>-->
+    <!--                    <include name="addToWishList"/>-->
+    <!--                </methods>-->
+    <!--            </class>-->
+    <!--            <class name="testcases.Tc03_Login">-->
+    <!--                <methods>-->
+    <!--                    <include name="loginWithValidData"/>-->
+    <!--                </methods>-->
+    <!--            </class>-->
+    <!--        </classes>-->
+    <!--    </test>-->
+
+    <!--        SC11- Logged user could add different products to compare list-->
+    <!--    <test name="Logged user could add different products to compare list">-->
+    <!--        <classes>-->
+    <!--            <class name="testcases.Tc01_Home">-->
+    <!--                <methods>-->
+    <!--                    <include name="validateEnteringLoginPage"/>-->
+    <!--                    <include name="addToCompareList"/>-->
+    <!--                </methods>-->
+    <!--            </class>-->
+    <!--            <class name="testcases.Tc03_Login">-->
+    <!--                <methods>-->
+    <!--                    <include name="loginWithValidData"/>-->
+    <!--                </methods>-->
+    <!--            </class>-->
+    <!--        </classes>-->
+    <!--    </test>-->
+
+    <test name="Logged user could add different products to compare list then remove them">
         <classes>
             <class name="testcases.Tc01_Home">
                 <methods>
-                    <include name="validateEnteringLoginPage"/>
-                    <include name="addToWishList"/>
+                    <include name="validateEnteringRegisterPage"/>
+                    <include name="addItemToCart"/>
+                    <include name="goToCart"/>
                 </methods>
             </class>
-            <class name="testcases.Tc03_Login">
+            <class name="testcases.Tc02_Register">
                 <methods>
-                    <include name="loginWithValidData"/>
+                    <include name="registerWithValidEmailAndPassword"/>
+                </methods>
+            </class>
+            <class name="testcases.Tc05_Cart">
+                <methods>
+                    <include name="removeItemsFromCart"/>
                 </methods>
             </class>
         </classes>
     </test>
 
-<!--    &lt;!&ndash;    SC11- Logged user could add different products to compare list&ndash;&gt;-->
-<!--    <test name="Logged user could add different products to compare list">-->
-<!--        <classes>-->
-<!--            <class name="testcases.Tc01_Home">-->
-<!--                <methods>-->
-<!--                    <include name="validateEnteringLoginPage"/>-->
-<!--                    <include name="addToCompareList"/>-->
-<!--                </methods>-->
-<!--            </class>-->
-<!--            <class name="testcases.Tc03_Login">-->
-<!--                <methods>-->
-<!--                    <include name="loginWithValidData"/>-->
-<!--                </methods>-->
-<!--            </class>-->
-<!--        </classes>-->
-<!--    </test>-->
-
-<!--    &lt;!&ndash;    SC12- Create successful Order&ndash;&gt;-->
-<!--    <test name="Create successful Order">-->
-<!--        <classes>-->
-<!--            <class name="testcases.Tc01_Home">-->
-<!--                <methods>-->
-<!--                    <include name="validateEnteringRegisterPage"/>-->
-<!--                    <include name="addItemToCart"/>-->
-<!--                    <include name="goToCart"/>-->
-<!--                </methods>-->
-<!--            </class>-->
-<!--            <class name="testcases.Tc02_Register">-->
-<!--                <methods>-->
-<!--                    <include name="registerWithValidEmailAndPassword"/>-->
-<!--                </methods>-->
-<!--            </class>-->
-<!--            <class name="testcases.Tc05_Cart">-->
-<!--                <methods>-->
-<!--                    <include name="checkout"/>-->
-<!--                </methods>-->
-<!--            </class>-->
-<!--        </classes>-->
-<!--    </test>-->
-
+    <!--        &lt;!&ndash;    SC12- Create successful Order&ndash;&gt;-->
+    <!--        <test name="Create successful Order">-->
+    <!--            <classes>-->
+    <!--                <class name="testcases.Tc01_Home">-->
+    <!--                    <methods>-->
+    <!--                        <include name="validateEnteringRegisterPage"/>-->
+    <!--                        <include name="addItemToCart"/>-->
+    <!--                        <include name="goToCart"/>-->
+    <!--                    </methods>-->
+    <!--                </class>-->
+    <!--                <class name="testcases.Tc02_Register">-->
+    <!--                    <methods>-->
+    <!--                        <include name="registerWithValidEmailAndPassword"/>-->
+    <!--                    </methods>-->
+    <!--                </class>-->
+    <!--                <class name="testcases.Tc05_Cart">-->
+    <!--                    <methods>-->
+    <!--                        <include name="checkout"/>-->
+    <!--                    </methods>-->
+    <!--                </class>-->
+    <!--            </classes>-->
+    <!--        </test>-->
 </suite>

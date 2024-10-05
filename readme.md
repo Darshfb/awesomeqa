@@ -43,7 +43,7 @@ To set up the AwesomeQa application locally, follow these steps:
 
 ### Local testing execution example
 
-![Local testing execution example](end to end scenario.gif)
+![Local testing execution example](end%20to%20end%20scenario.gif)
 
 ## Contributing
 * We welcome contributions from the community. To contribute to AwesomeQa, follow these steps:

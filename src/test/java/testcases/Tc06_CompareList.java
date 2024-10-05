@@ -1,9 +1,6 @@
 package testcases;
-
 import Pages.P01_HomePage;
-import Pages.P05_CartPage;
 import Pages.P06_ComparePage;
-import com.github.javafaker.Faker;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 

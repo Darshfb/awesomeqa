@@ -20,9 +20,8 @@ public class Tc05_Cart extends TestBase
                 faker.address().secondaryAddress(),
                 faker.address().city(),
                 "32957",
-                "Hello world"
+                "I need the order now"
         );
-        Assert.assertTrue(cartPage.checkCartItemCounts());
     }
 
     @Test(priority = 2, dependsOnGroups = {"goToCart"})

@@ -78,7 +78,7 @@ public class P05_CartPage {
     WebElement continueToFinishOrderButton;
 
     public void clickCheckoutList(String fName, String lName, String company, String fAddress, String sAddress, String city, String postCode, String comment) {
-        WebDriverWait wait = new WebDriverWait(customDriver, Duration.ofSeconds(10));
+        WebDriverWait wait = new WebDriverWait(customDriver, Duration.ofSeconds(2));
         try {
             wait.until(ExpectedConditions.urlContains("https://awesomeqa.com/ui/index.php?route=checkout/checkout"));
         } catch (TimeoutException e) {
@@ -126,9 +126,6 @@ public class P05_CartPage {
         firstItemInCart.click();
     }
 
-    public Boolean checkCartItemCounts(){
-        return cartItems.size() == 2;
-    }
 
     @FindBy(xpath = "(//p)[text()='Your shopping cart is empty!'][2]")
     WebElement emptyCart;

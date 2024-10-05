@@ -1,5 +1,4 @@
 package testcases;
-
 import Pages.P03_LoginPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -15,7 +14,6 @@ public class Tc03_Login extends TestBase
     @Test(priority = 1, description = "Login with valid email & password", dependsOnGroups = {"step1"}, groups = {"step2"})
     public void loginWithValidData()
     {
-        System.out.println(Tc02_Register.email + "Email in login");
         String email = (Tc02_Register.email == null) ? "mostafamahmoudaboads@gmail.com" : Tc02_Register.email;
         String password = (Tc02_Register.password == null) ? "AB123456" : Tc02_Register.password;
         loginPage = new P03_LoginPage(driver);

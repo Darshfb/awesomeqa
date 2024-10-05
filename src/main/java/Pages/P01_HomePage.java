@@ -259,7 +259,7 @@ public class P01_HomePage {
 
     }
 
-    @FindBy(xpath = "(//a)[text()='wish list']")
+    @FindBy(id = "wishlist-total")
     WebElement wishListPage;
 
     By first = By.xpath("(//div)[@class='row'][3]/div[1]/div/div[3]/button[2]");
@@ -270,6 +270,11 @@ public class P01_HomePage {
         websiteLogo.click();
         customDriver.findElement(first).click();
         customDriver.findElement(second).click();
+        try {
+            Thread.sleep(500);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         wishListPage.click();
     }
 

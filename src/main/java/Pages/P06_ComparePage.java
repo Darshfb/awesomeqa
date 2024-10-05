@@ -6,7 +6,6 @@ import org.openqa.selenium.support.PageFactory;
 
 public class P06_ComparePage
 {
-
     public P06_ComparePage(WebDriver driver) {
         PageFactory.initElements(driver, this);
     }

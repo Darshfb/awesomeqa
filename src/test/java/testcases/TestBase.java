@@ -15,9 +15,8 @@ public class TestBase
     static WebDriver driver;
 
     // Java class include before and after methods
-    @Parameters(value = "browserName")
     @BeforeTest
-    public void setupWebDriver(String browserName)
+    public void setupWebDriver()
     {
         setDriver(getNewInstance("safari"));
         driver = getDriver();

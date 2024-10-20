@@ -19,6 +19,9 @@ public class TestBase
     @BeforeTest
     public void setupWebDriver(String browserName)
     {
+if(browserName == null){
+    browserName = "safari";
+}
         setDriver(getNewInstance(browserName));
         driver = getDriver();
         driver.manage().window().maximize();

@@ -19,7 +19,7 @@ public class TestBase
     @BeforeTest
     public void setupWebDriver(String browserName)
     {
-        setDriver(getNewInstance(browserName));
+        setDriver(getNewInstance("safari"));
         driver = getDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
